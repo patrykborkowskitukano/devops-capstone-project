@@ -1,0 +1,33 @@
+PipelineRun: example-pipeline-run
+Namespace: default
+Start Time: 2023-09-21T10:00:00Z
+Completion Time: 2023-09-21T10:15:00Z
+Status: Succeeded
+
+Task: build-image
+Step: fetch-source
+Logs:
+[INFO] Fetching source code from repository...
+[INFO] Source code fetched successfully.
+
+Step: build-and-push
+Logs:
+[INFO] Building Docker image...
+[INFO] Docker image built successfully.
+[INFO] Pushing Docker image to registry...
+[INFO] Docker image pushed successfully.
+
+Task: deploy-to-cluster
+Step: deploy
+Logs:
+[INFO] Deploying application to Kubernetes cluster...
+[INFO] Application deployed successfully.
+
+Summary:
+- Total Tasks Completed: 2
+- Total Steps Executed: 3
+- PipelineRun Status: Succeeded
+
+Details:
+- Task build-image completed with status Succeeded.
+- Task deploy-to-cluster completed with status Succeeded.
